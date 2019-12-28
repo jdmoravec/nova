@@ -832,7 +832,7 @@ def get_hash_str(base_str):
     """
     if isinstance(base_str, six.text_type):
         base_str = base_str.encode('utf-8')
-    return hashlib.md5(base_str).hexdigest()
+    return hashlib.sha1(base_str).hexdigest()
 
 
 def get_sha256_str(base_str):
